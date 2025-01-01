@@ -6,7 +6,7 @@ import userRoute from "./routes/addUser.js";
 import pdfRoute from "./routes/pdfUpload.js";
 import qaRoute from "./routes/quesUpload.js";
 
-// const PORT = 3000;
+const PORT = 3000;
 
 dotenv.config();
 
@@ -37,6 +37,6 @@ mongoose.connect(process.env.MONGODB_ATLAS_URI).then(() => {
     console.error(err);
 });
 
-// app.listen(PORT, () => {
-//   console.log(`Server is running on http://localhost:${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`${PORT}`);
+});
