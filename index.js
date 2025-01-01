@@ -12,11 +12,10 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({
+app.options('*', cors({
   origin: 'https://notemaker-7m7w4e4w8-thirupathi8s-projects.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
 }));
 // app.use(cors());
 
