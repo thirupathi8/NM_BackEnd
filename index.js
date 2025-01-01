@@ -14,10 +14,10 @@ const app = express();
 
 app.use(cors({
   origin: 'https://notemaker-7m7w4e4w8-thirupathi8s-projects.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
 }));
-
 // app.use(cors());
 
 app.use(express.json());
